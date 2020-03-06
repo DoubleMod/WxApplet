@@ -1,0 +1,5 @@
+/**index.wxss**/
+
+.pushRent {
+  margin-top: 20px;
+}

@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+
+<view class="cu-bar bg-white solid-bottom">
+    <view class='action'>
+      <button class="cu-btn bg-green shadow" bindtap="subscriptionNotice">订阅</button>
+    </view>
+        <view class='action'>
+      <button class="pushRent" bindtap="pushMsg">推送租金</button>
+    </view>
+  </view>
+</view>

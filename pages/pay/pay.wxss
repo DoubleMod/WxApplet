@@ -1,0 +1,4 @@
+/* miniprogram/pages/pay/pay.wxss */
+.payment-button{
+  margin-top: 20px;
+}

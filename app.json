@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/pull/index",
+    "pages/pay/pay",
+    "pages/logs/logs",
+    "pages/user/user",
+    "pages/video/video"
+  ],
+  "permission": {
+    "scope.writePhotosAlbum": {
+      "desc": "读取相册"
+    }
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "订阅消息",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#222222",
+    "selectedColor": "#FF3000",
+    "backgroundColor": "#FFF",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/pull/index",
+        "text": "订阅"
+      },
+      {
+        "pagePath": "pages/pay/pay",
+        "text": "支付"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "text": "视频"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "用户"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

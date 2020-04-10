@@ -13,10 +13,8 @@ Page({
     this.videoContext = wx.createVideoContext('myVideo')
   },
   inputValue: '',
-
   data: {
     src: '',
-    bindKeyInput: '',
     danmuList: [{
         text: '第 1s 出现的弹幕',
         color: '#ff0000',
@@ -53,12 +51,13 @@ Page({
   },
   //获取视频
   bindButtonTap() {
-    const that = this
+    var that = this
     wx.chooseVideo({
       sourceType: ['album', 'camera'],
       maxDuration: 60,
       camera: ['front', 'back'],
       success(res) {
+        console.log(res)
         wx.showToast({
           title: res.tempFilePath,
           icon: 'none'

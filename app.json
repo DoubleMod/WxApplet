@@ -1,10 +1,11 @@
 {
   "pages": [
+    "pages/upload/upload",
     "pages/pull/index",
-    "pages/pay/pay",
     "pages/logs/logs",
     "pages/user/user",
-    "pages/video/video"
+    "pages/video/video",
+    "pages/pay/pay"
   ],
   "permission": {
     "scope.writePhotosAlbum": {
@@ -26,6 +27,9 @@
     "position": "bottom",
     "list": [
       {
+        "pagePath": "pages/upload/upload",
+        "text": "上传"
+      },{
         "pagePath": "pages/pull/index",
         "text": "订阅"
       },

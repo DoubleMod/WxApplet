@@ -15,5 +15,27 @@ const formatNumber = n => {
 }
 
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  getAccessToken: getAccessToken
+}
+
+var getAccessToken = function () {
+console.log("ooookkkk")
+  // var that = this
+  // let APPID = "wx861a2d761e54d2f7"
+  // let APPSECRET = "82e69ed352a00c625d733884037defde"
+  // wx.request({
+  //   url: `https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=${APPID}&secret=${APPSECRET}`,
+  //   method: 'GET',
+  //   success: (res) => {
+  //     console.log(res)
+  //     console.log(res.data.access_token)
+  //     that.setData({
+  //       access_token: res.data.access_token
+  //     })
+  //   },
+  //   fail: (res) => {
+  //     console.log(res)
+  //   },
+  // })
 }

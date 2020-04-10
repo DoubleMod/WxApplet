@@ -1,0 +1,12 @@
+<view class="container"> 
+ <view>
+    <button type="default" bindtap="gotoShow" >点击上传照片</button> 
+  </view>
+  <view>
+    <image class= "show-image" mode="aspectFitf" src="{{src}}"></image>
+  </view>
+  <view class="section">
+  <view>图片URL: </view>
+  <textarea maxlength="1000" bindblur="bindTextAreaBlur" auto-height placeholder="请输入图片链接" />
+</view>
+</view>

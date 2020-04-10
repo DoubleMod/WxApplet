@@ -9,4 +9,10 @@
       <button class="pushRent" bindtap="pushMsg">推送租金</button>
     </view>
   </view>
+
+
+<view class="cu-bar bg-white solid-bottom">
+   <button class="pushRent" bindtap="getHDPic">获取HD图片</button>
+</view>
+<img src="{{src}}" />
 </view>

@@ -2,3 +2,7 @@
 .payment-button{
   margin-top: 20px;
 }
+
+.transaction{
+  margin-top: 20px;
+}

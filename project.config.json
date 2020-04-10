@@ -23,8 +23,8 @@
 		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.10.1",
-	"appid": "wxe9975e09afd18226",
+	"libVersion": "2.10.0",
+	"appid": "wx197e08191a86fea3",
 	"projectname": "you-wxapp-projectname",
 	"debugOptions": {
 		"hidedInDevtools": []

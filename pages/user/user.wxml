@@ -16,4 +16,12 @@
   <view class="useropenid">
     <button bindtap="syncOpenid">同步openid</button>
   </view>
+    <view class="useropenid">
+    <button open-type="getUserInfo" bindgetuserinfo="nyInfo">我的信息</button>
+  </view>
+
+  <!-- const accountInfo = wx.getAccountInfoSync();
+console.log(accountInfo.miniProgram.appId) // 小程序 appId
+console.log(accountInfo.plugin.appId) // 插件 appId
+console.log(accountInfo.plugin.version) // 插件版本号， 'a.b.c' 这样的形式 -->
 </view>

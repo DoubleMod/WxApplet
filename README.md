@@ -1,2 +1,0 @@
-# WxApplet
-# WxApplet

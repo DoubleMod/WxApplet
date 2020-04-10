@@ -1,4 +1,5 @@
 //index.js
+var util = require('../../utils/util.js')
 //获取应用实例
 const app = getApp()
 
@@ -52,6 +53,20 @@ Page({
       hasUserInfo: true
     })
   },
+  nyInfo: function (e) {
+    console.log("success")
+    wx.getUserInfo({
+      success: function (res) {
+        var userInfo = res.userInfo
+        var nickName = userInfo.nickName
+        var avatarUrl = userInfo.avatarUrl
+        var gender = userInfo.gender //性别 0：未知、1：男、2：女
+        var province = userInfo.province
+        var city = userInfo.city
+        var country = userInfo.country
+      }
+    }) 
+  },
   subscribeMessages: function(e) {
     console.log(e)
     wx.requestSubscribeMessage({
@@ -68,35 +83,36 @@ Page({
     })
   },
   syncOpenid: function(e) {
-    var that = this;
-    wx.login({
-      success(res) {
-        if (res.code) {
-          that.setData({
-            motto: res.code
-          })
-          wx.request({
-            url: 'http://192.168.0.108:8900/syncOpenid',
-            data: {
-              code: res.code
-            },
-            success(res) {
-              console.log(res.data)
-              wx.showToast({
-                title: res.data, //标题
-                icon: 'none',
-                duration: 2000
-              })
-              // that.setData({
-              //   motto: res.data
-              // })
+    util.getAccessToken(e)
+    // var that = this;
+    // wx.login({
+    //   success(res) {
+    //     if (res.code) {
+    //       that.setData({
+    //         motto: res.code
+    //       })
+    //       wx.request({
+    //         url: 'http://192.168.0.108:8900/syncOpenid',
+    //         data: {
+    //           code: res.code
+    //         },
+    //         success(res) {
+    //           console.log(res.data)
+    //           wx.showToast({
+    //             title: res.data, //标题
+    //             icon: 'none',
+    //             duration: 2000
+    //           })
+    //           // that.setData({
+    //           //   motto: res.data
+    //           // })
 
-            }
-          })
-        } else {
-          console.log('login failed', +res.errMsg)
-        }
-      }
-    })
+    //         }
+    //       })
+    //     } else {
+    //       console.log('login failed', +res.errMsg)
+    //     }
+    //   }
+    // })
   }
 })

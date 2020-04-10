@@ -1,13 +1,22 @@
 <!--miniprogram/pages/pay/pay.wxml-->
 <!-- plugin/components/pay.wxml -->
 <!-- 上线时，version 应改为 "release"，并确保插件所有者小程序已经发布 -->
-<functional-page-navigator
-  version="develop"
-  name="requestPayment"
-  args="{{ args }}"
-  bind:success="paymentSuccess"
-  bind:fail="paymentFailed"
->
-  <button class="payment-button">支付 0.01 元</button>
-</functional-page-navigator>
+<view>
+  <text class="usermotto">timeStamp：{{timeStamp}}</text>
+</view>
+<view>
+  <text class="usermotto">nonceStr：{{nonceStr}}</text>
+</view>
+<view>
+  <text class="usermotto">package：{{package}}</text>
+</view>
+<text class="usermotto">signType：{{signType}}</text>
+<view>
+  <text class="usermotto">paySign：{{paySign}}</text>
+</view>
 
+<button class="transaction" bindtap="transactionOrder">获取订单</button>
+
+<functional-page-navigator version="develop" name="requestPayment" args="{{ args }}" bind:success="paymentSuccess" bind:fail="paymentFailed">
+  <button class="payment-button" bindtap="requestPayment" >支付 0.01 元</button>
+</functional-page-navigator>
